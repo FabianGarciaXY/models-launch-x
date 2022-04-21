@@ -1,10 +1,8 @@
-
 const User = require('./../app/user');
 
 describe("Suite test for class User", () => {
 
     test('Test case 1', () => {
-
         // Creating a new object from the class User
         const user = new User(
             1, 
@@ -14,7 +12,6 @@ describe("Suite test for class User", () => {
             'date',
             'last date'
         )
-
         // Here goes each test case
         expect(user.id).toBe(1);
         expect(user.username).toBe('FabianGarciaXY');
@@ -27,7 +24,6 @@ describe("Suite test for class User", () => {
 
     // Adding getters
     test('Testing getters', () => {
-
         const newUser = new User(2, 'FabyanXY', 'Fabi', 'My Bio');
         expect(newUser.username).toBe('FabyanXY');
         expect(newUser.name).toBe('Fabi');
@@ -37,12 +33,9 @@ describe("Suite test for class User", () => {
     });
 
     test('Adding Setters', () => {
-
         const user = new User(3, 'FabianGahezz', 'Fabian', 'Bio');
-
         user.setUsername = 'FabianXY';
         expect(user.username).toBe('FabianXY');
-
         user.bio = 'My new Bio';
         expect(user.bio).toBe('My new Bio');
     })

@@ -1,10 +1,15 @@
 
-const UserService = require('./../app/user');
+const UserService = require('./../app/service');
 
 describe('Suite of tests for Service class', () => {
 
-    test('Test 1 for Service class', () => {
+    test('Requirement 1: using a class UserService', () => {
 
-        expect(2).toBe(3);
+        const user = UserService.create(1, 'FabianXY', 'Fabian');
+
+        expect(user.id).toBe(1);
+        expect(user.name).toBe('Fabian');
+        expect(user.username).toBe('FabianXY');
+        expect(user.bio).not.toBeUndefined();
     })
 })
