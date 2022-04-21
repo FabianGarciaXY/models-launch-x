@@ -7,8 +7,8 @@ class User {
         this.username = username;
         this.name = name;
         this.bio = bio;
-        this.dateCreated = new Date();
-        this.lastUpdated = new Date();
+        this.dateCreated = dateCreated;
+        this.lastUpdated = lastUpdated;
     }
 
 }
