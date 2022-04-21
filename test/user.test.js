@@ -20,7 +20,8 @@ describe("Suite test for class User", () => {
         expect(user.username).toBe('FabianGarciaXY');
         expect(user.name).toBe('Fabian');
         expect(user.bio).toBe('Hola mi nombre es Fabian');
-        expect(user.dateCreated).toBe('date');
-        expect(user.lastUpdated).toBe('last date');
+        // Verifiryn its values are not undifined
+        expect(user.dateCreated).not.toBeUndefined();
+        expect(user.lastUpdated).not.toBeUndefined();
     })
 })
