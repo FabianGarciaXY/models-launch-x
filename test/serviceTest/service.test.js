@@ -35,5 +35,19 @@ describe('Suite of tests for Service class', () => {
         expect(user.id).toBe(1);
         expect(user.username).toBe('FabianGahezz');
         expect(user.name).toBe('Fabian')
+    });
+
+    // Requerimiento 4
+    test('Requirement 4: test case for getAllUsernames', () => {
+        
+        const user1 = UserService.create(1, 'FabianXY', 'Fabian');
+        const user2 = UserService.create(2, 'JavierXD', 'Javier');
+        const user3 = UserService.create(3, 'Juan123', 'Juan');
+        const user4 = UserService.create(4, 'Luisa#1', 'Luisa');
+
+        const listOfUsers = [user1, user2, user3, user4];
+        const listOfUsernames = UserService.getAllUsernames(listOfUsers);
+
+        expect(listOfUsernames).toEqual(['FabianXY', 'JavierXD', 'Juan123', 'Luisa#1']);
     })
 })

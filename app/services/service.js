@@ -7,16 +7,20 @@ class Service{
         return new User(id, username, name, 'My bio');
     }
 
-    // Requirement 1
+    // Requirement 2
     static getInfo(user) {
         return [user.id, user.username, user.name, user.bio];
     }
 
-    // Requirement 2
+    // Requirement 3
     static updateUserUsername(user, newName) {
         user.username = newName;
     }
 
+    // Requirement 4
+    static getAllUsernames(listOfUsers) {
+        return listOfUsers.map( user => user.username );
+    }
 }
 
 module.exports = Service;
