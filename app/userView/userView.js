@@ -8,6 +8,10 @@ class UserView {
         if (payload == null) {
             const error = {error: 'payload no existe'}
             return error;
+        }
+        else if (!payload.id || !payload.username || !payload.name) {
+            const error =  { error: 'necesitan tener un valor válido' }
+            return error;
         } 
         else if (payload.id == null || payload.username == null || payload.username == null){
             const error =  {error: 'necesitan tener un valor válido'}
@@ -17,8 +21,6 @@ class UserView {
             return UserService.create(payload);
         }
     }
-
-
 }
 
 module.exports = UserView;

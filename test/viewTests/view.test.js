@@ -24,4 +24,15 @@ describe('Tests for User View', () => {
         expect(response.error).toMatch(/necesitan tener un valor válido/);
     });
 
+    // Requirement 3
+    test('Requirement 3: validating payload has all its properties', () => {
+
+        const payload = {
+            id: 2,
+            username: 'Fabian'
+        }
+
+        const response = UserView.createUser(payload);
+        expect(response.error).toMatch(/necesitan tener un valor válido/);
+    })
 })
