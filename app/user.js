@@ -11,6 +11,21 @@ class User {
         this.lastUpdated = new Date();
     }
 
+    // Requerimiento 3
+    get getDateCreated() {
+        return this.dateCreated;
+    }
+    get getLastUpdated() {
+        return this.lastUpdated;
+    }
+
+    // Requerimiento 4
+    set setUsername(username) {
+        this.username = username;
+    }
+    set setBio(bio) {
+        this.bio = bio;
+    }
 }
 
 module.exports = User;

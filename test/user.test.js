@@ -23,5 +23,27 @@ describe("Suite test for class User", () => {
         // Verifiryn its values are not undifined
         expect(user.dateCreated).not.toBeUndefined();
         expect(user.lastUpdated).not.toBeUndefined();
+    });
+
+    // Adding getters
+    test('Testing getters', () => {
+
+        const newUser = new User(2, 'FabyanXY', 'Fabi', 'My Bio');
+        expect(newUser.username).toBe('FabyanXY');
+        expect(newUser.name).toBe('Fabi');
+        expect(newUser.bio).toBe('My Bio');
+        expect(newUser.getDateCreated).not.toBeUndefined();
+        expect(newUser.getLastUpdated).not.toBeUndefined();
+    });
+
+    test('Adding Setters', () => {
+
+        const user = new User(3, 'FabianGahezz', 'Fabian', 'Bio');
+
+        user.setUsername = 'FabianXY';
+        expect(user.username).toBe('FabianXY');
+
+        user.bio = 'My new Bio';
+        expect(user.bio).toBe('My new Bio');
     })
 })
