@@ -25,4 +25,15 @@ describe('Suite of tests for Service class', () => {
         expect(userInfo[3]).toBe('My bio');
 
     })
+
+    // Requerimiento 3
+    test('Requirement 3: testing static method updateUserUsername', () => {
+
+        const user = UserService.create(1, 'FabianXY', 'Fabian');
+        UserService.updateUserUsername(user, 'FabianGahezz');
+               
+        expect(user.id).toBe(1);
+        expect(user.username).toBe('FabianGahezz');
+        expect(user.name).toBe('Fabian')
+    })
 })
