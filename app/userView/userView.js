@@ -18,7 +18,7 @@ class UserView {
             return error;
         }
         else {
-            return UserService.create(payload);
+            return UserService.create(payload.id, payload.username, payload.name)
         }
     }
 }
