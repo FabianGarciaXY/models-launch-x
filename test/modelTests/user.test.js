@@ -1,4 +1,4 @@
-const User = require('./../app/user');
+const User = require('./../../app/models/user');
 
 describe("Suite test for class User", () => {
 
